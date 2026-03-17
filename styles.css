@@ -265,6 +265,13 @@ a { color: inherit; text-decoration: none; }
   color: var(--color-primary);
   background-color: rgba(3, 105, 161, 0.06);
 }
+.navbar__link.btn--primary {
+  color: #FFFFFF;
+}
+.navbar__link.btn--primary:hover {
+  color: #FFFFFF;
+  background-color: var(--color-primary-dark);
+}
 
 /* Mobile toggle */
 .navbar__toggle {
