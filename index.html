@@ -18,12 +18,19 @@
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#" class="navbar__brand" aria-label="Rural ConnectMe Home">
-        <svg class="navbar__logo" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <circle cx="16" cy="16" r="14" stroke="#0C4A6E" stroke-width="2.5"/>
-          <path d="M8 20 Q12 10 16 14 Q20 18 24 12" stroke="#14532D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <circle cx="10" cy="18" r="2" fill="#0C4A6E"/>
-          <circle cx="16" cy="14" r="2" fill="#14532D"/>
-          <circle cx="22" cy="13" r="2" fill="#9A3412"/>
+        <svg class="navbar__logo" width="36" height="36" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M54 38 A24 24 0 1 1 52 22" stroke="#1A3A6C" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <circle cx="24" cy="24" r="4.2" fill="#1A3A6C"/>
+          <path d="M16 42 Q16 32 24 32 Q32 32 32 42 Z" fill="#1A3A6C"/>
+          <path d="M19 16 Q24 12 29 16" stroke="#1A3A6C" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M16 13 Q24 7 32 13" stroke="#1A3A6C" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <circle cx="36" cy="32" r="2" fill="#1A3A6C"/>
+          <line x1="36" y1="32" x2="46" y2="24" stroke="#1A3A6C" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="36" y1="32" x2="50" y2="32" stroke="#4AA84F" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="36" y1="32" x2="46" y2="40" stroke="#4AA84F" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="47" cy="23" r="2" fill="#1A3A6C"/>
+          <circle cx="51" cy="32" r="2" fill="#4AA84F"/>
+          <circle cx="47" cy="41" r="2" fill="#4AA84F"/>
         </svg>
         <span>Rural ConnectMe</span>
       </a>
@@ -83,6 +90,39 @@
       </div>
     </section>
 
+    <!-- SECTION: Mission & Vision -->
+    <section class="section section--light" id="mission-vision">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Mission &amp; Vision</h2>
+          <p class="section__subtitle">The purpose and horizon that guide Rural ConnectMe.</p>
+        </div>
+        <div class="mission__grid mission__grid--2">
+          <div class="mission__card">
+            <div class="mission__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h3 class="mission__card-title">Mission</h3>
+            <p>Our mission is to help connect infrastructure, people, and economic opportunity in rural communities by bringing together counties, operators, technology providers, workforce programs, economic development organizations, and funding sources.</p>
+          </div>
+          <div class="mission__card">
+            <div class="mission__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#14532D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 class="mission__card-title">Long-Term Vision</h3>
+            <p>The long-term vision of Rural ConnectMe is to help rural communities move from connectivity deployment to economic participation by creating coordinated ecosystems where infrastructure, workforce, digital adoption, and local economic development work together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION 1: The Rural Connectivity Challenge -->
     <section class="section section--white" id="challenge">
       <div class="container">
@@ -128,6 +168,21 @@
             </li>
           </ul>
           <p class="challenge__conclusion">As a result, connectivity investments sometimes struggle to fully translate into sustainable local economic participation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: The Coordination Gap -->
+    <section class="section section--light" id="coordination-gap">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">The Coordination Gap</h2>
+        </div>
+        <div class="gap__content">
+          <p class="gap__lead">Infrastructure alone does not create economic growth.</p>
+          <p>Fiber in the ground, towers on the horizon, and satellites overhead deliver signal — not prosperity. Without a coordinated pipeline of local talent, digital adoption, and economic strategy, broadband investments stall at the handoff.</p>
+          <p>The gap is not technological. It is coordination: aligning the operators who build the networks, the workforce programs that staff them, the counties that host them, and the institutions that fund them around a shared local outcome.</p>
+          <p class="gap__close">Rural ConnectMe exists to close that gap.</p>
         </div>
       </div>
     </section>
@@ -183,7 +238,7 @@
           <h2 class="section__title">A Rural Digital Ecosystem</h2>
           <p class="section__subtitle">Rural ConnectMe seeks to align multiple stakeholders involved in rural connectivity and community development. By strengthening collaboration among these actors, rural connectivity investments can generate broader and more sustainable economic outcomes.</p>
         </div>
-        <div class="stakeholders__grid">
+        <div class="stakeholders__grid stakeholders__grid--6">
           <article class="stakeholder-card">
             <div class="stakeholder-card__icon" aria-hidden="true">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0C4A6E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -251,6 +306,149 @@
             <h3 class="stakeholder-card__title">Rural Communities</h3>
             <p class="stakeholder-card__desc">The residents, small businesses, schools, and organizations who stand to benefit from connectivity and whose voices shape the work.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Ecosystem We Coordinate -->
+    <section class="section section--light" id="ecosystem-coordinate">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">The Ecosystem We Coordinate</h2>
+          <p class="section__subtitle">Rural ConnectMe convenes the stakeholders whose alignment turns connectivity into economic participation.</p>
+        </div>
+        <div class="stakeholders__grid stakeholders__grid--6">
+          <article class="stakeholder-card">
+            <div class="stakeholder-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0C4A6E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18"/>
+                <path d="M5 21V7l7-4 7 4v14"/>
+                <path d="M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <h3 class="stakeholder-card__title">Counties</h3>
+            <p class="stakeholder-card__desc">Local governments anchoring connectivity in community economic development plans.</p>
+          </article>
+          <article class="stakeholder-card">
+            <div class="stakeholder-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#14532D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                <circle cx="12" cy="20" r="1"/>
+              </svg>
+            </div>
+            <h3 class="stakeholder-card__title">Telecom Operators</h3>
+            <p class="stakeholder-card__desc">Fiber, fixed wireless, and satellite providers deploying and maintaining rural networks.</p>
+          </article>
+          <article class="stakeholder-card">
+            <div class="stakeholder-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="stakeholder-card__title">Workforce Boards</h3>
+            <p class="stakeholder-card__desc">Regional boards developing the technical talent required to install, operate, and sustain infrastructure.</p>
+          </article>
+          <article class="stakeholder-card">
+            <div class="stakeholder-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0C4A6E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="stakeholder-card__title">Tribal Organizations</h3>
+            <p class="stakeholder-card__desc">Sovereign nations and tribal entities leading connectivity strategies on tribal lands and surrounding regions.</p>
+          </article>
+          <article class="stakeholder-card">
+            <div class="stakeholder-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#14532D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="14" rx="2"/>
+                <path d="M2 10h20"/>
+                <path d="M8 22h8"/>
+                <path d="M12 18v4"/>
+              </svg>
+            </div>
+            <h3 class="stakeholder-card__title">Technology Providers</h3>
+            <p class="stakeholder-card__desc">Platforms and solution vendors enabling digital adoption across agriculture, health, education, and small business.</p>
+          </article>
+          <article class="stakeholder-card">
+            <div class="stakeholder-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="stakeholder-card__title">Investors</h3>
+            <p class="stakeholder-card__desc">Public and private capital partners underwriting the infrastructure, workforce, and adoption programs that drive returns.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Expected Impact -->
+    <section class="section section--white" id="impact">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Expected Impact</h2>
+          <p class="section__subtitle">What coordinated ecosystems deliver when infrastructure, workforce, and adoption move together.</p>
+        </div>
+        <div class="impact__grid">
+          <div class="impact__card">
+            <div class="impact__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              </svg>
+            </div>
+            <h3 class="impact__title">Job Creation</h3>
+            <p class="impact__desc">New local roles across deployment, operations, and the digital services broadband unlocks.</p>
+          </div>
+          <div class="impact__card">
+            <div class="impact__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#14532D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <h3 class="impact__title">Workforce Readiness</h3>
+            <p class="impact__desc">Pipelines aligned to real employer demand for technicians, operators, and digital-economy roles.</p>
+          </div>
+          <div class="impact__card">
+            <div class="impact__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9A3412" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3 class="impact__title">Digital Inclusion</h3>
+            <p class="impact__desc">Residents, schools, farms, and small businesses actively using connectivity to participate in the digital economy.</p>
+          </div>
+          <div class="impact__card">
+            <div class="impact__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"/>
+                <polyline points="7 14 11 10 14 13 21 6"/>
+              </svg>
+            </div>
+            <h3 class="impact__title">Stronger Local Economies</h3>
+            <p class="impact__desc">Diversified revenue, retained talent, and resilient rural businesses built on a digital foundation.</p>
+          </div>
+          <div class="impact__card">
+            <div class="impact__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#14532D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="impact__title">Better ROI</h3>
+            <p class="impact__desc">Infrastructure dollars that translate into measurable community outcomes, not just coverage maps.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -328,7 +526,7 @@
             </svg>
           </div>
           <div class="focus__details">
-            <p>Initial conversations are taking place with stakeholders in rural regions of <strong>Florida</strong> and <strong>Georgia</strong>.</p>
+            <p>Initial conversations are taking place with stakeholders in rural regions of <strong>Florida</strong> and <strong>Georgia</strong>, with additional states and regions expected to follow as outreach efforts continue.</p>
             <p>These discussions include:</p>
             <ul class="focus__list">
               <li>Broadband operators and connectivity providers</li>
@@ -387,12 +585,19 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#" class="navbar__brand" aria-label="Rural ConnectMe Home">
-          <svg class="navbar__logo" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <circle cx="16" cy="16" r="14" stroke="#94A3B8" stroke-width="2.5"/>
-            <path d="M8 20 Q12 10 16 14 Q20 18 24 12" stroke="#94A3B8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <circle cx="10" cy="18" r="2" fill="#94A3B8"/>
-            <circle cx="16" cy="14" r="2" fill="#94A3B8"/>
-            <circle cx="22" cy="13" r="2" fill="#94A3B8"/>
+          <svg class="navbar__logo" width="32" height="32" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M54 38 A24 24 0 1 1 52 22" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <circle cx="24" cy="24" r="4.2" fill="#94A3B8"/>
+            <path d="M16 42 Q16 32 24 32 Q32 32 32 42 Z" fill="#94A3B8"/>
+            <path d="M19 16 Q24 12 29 16" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M16 13 Q24 7 32 13" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <circle cx="36" cy="32" r="2" fill="#94A3B8"/>
+            <line x1="36" y1="32" x2="46" y2="24" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="36" y1="32" x2="50" y2="32" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="36" y1="32" x2="46" y2="40" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="47" cy="23" r="2" fill="#94A3B8"/>
+            <circle cx="51" cy="32" r="2" fill="#94A3B8"/>
+            <circle cx="47" cy="41" r="2" fill="#94A3B8"/>
           </svg>
           <span>Rural ConnectMe</span>
         </a>
