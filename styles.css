@@ -344,6 +344,12 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   max-width: 480px;
   margin-left: auto;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #EFF6FF;
 }
 
 /* --- Sections --- */
