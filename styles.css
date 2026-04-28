@@ -313,7 +313,7 @@ a { color: inherit; text-decoration: none; }
 }
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: var(--space-12);
   align-items: center;
 }
@@ -342,14 +342,14 @@ a { color: inherit; text-decoration: none; }
 }
 .hero__illustration {
   width: 100%;
-  max-width: 480px;
+  max-width: 640px;
   margin-left: auto;
   height: auto;
   display: block;
   border-radius: 16px;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background: #EFF6FF;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
 }
 
 /* --- Sections --- */
