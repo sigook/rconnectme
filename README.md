@@ -1,43 +1,43 @@
 # Rural ConnectMe
 
-Sitio web institucional de **Rural ConnectMe** — [www.rconnectme.com](https://www.rconnectme.com).
+Institutional website for **Rural ConnectMe** — [www.rconnectme.com](https://www.rconnectme.com).
 
-Rural ConnectMe es una iniciativa que explora cómo la expansión de banda ancha en zonas rurales de Estados Unidos puede integrarse con el desarrollo de fuerza laboral local y la participación digital de la comunidad, para que la inversión en conectividad se traduzca en crecimiento económico real.
+Rural ConnectMe is an initiative that explores how broadband expansion in rural areas of the United States can be integrated with local workforce development and community digital participation, so that connectivity investment translates into real economic growth.
 
-El sitio presenta la misión y visión de la iniciativa, el desafío de conectividad rural, el enfoque de tres pilares (infraestructura, fuerza laboral, participación digital), el ecosistema de actores que coordina, el impacto esperado y la experiencia previa del equipo.
+The site presents the initiative's mission and vision, the rural connectivity challenge, the three-pillar approach (infrastructure, workforce, digital participation), the ecosystem of actors it coordinates, the expected impact, and the team's prior experience.
 
 ## Stack
 
-Sitio estático sin proceso de build:
+Static site with no build process:
 
-- `index.html` — contenido completo de la página.
-- `styles.css` — sistema de diseño basado en CSS custom properties (paleta navy/verde/naranja, tipografías Lexend + Source Sans 3, escala de espaciado 8dp, contraste objetivo WCAG AAA).
-- `main.js` — IIFE con sombra de navbar al hacer scroll, menú móvil, animaciones fade-in con `IntersectionObserver` (respeta `prefers-reduced-motion`) y smooth scroll para anclas.
-- `favicon.svg`, `CNAME` — favicon y dominio personalizado para GitHub Pages.
+- `index.html` — full page content.
+- `styles.css` — design system based on CSS custom properties (navy/green/orange palette, Lexend + Source Sans 3 typography, 8dp spacing scale, WCAG AAA contrast target).
+- `main.js` — IIFE with navbar scroll shadow, mobile menu, fade-in animations via `IntersectionObserver` (honors `prefers-reduced-motion`), and smooth scroll for anchors.
+- `favicon.svg`, `CNAME` — favicon and custom domain for GitHub Pages.
 
-Las fuentes se cargan desde Google Fonts y el video del hero desde Azure Blob Storage. No hay dependencias npm ni paso de compilación.
+Fonts are loaded from Google Fonts and the hero video from Azure Blob Storage. No npm dependencies, no compilation step.
 
-## Desarrollo local
+## Local development
 
-Abrir `index.html` directamente en el navegador, o servir la carpeta con cualquier servidor estático:
+Open `index.html` directly in the browser, or serve the folder with any static server:
 
 ```bash
 python -m http.server 8000
-# luego abrir http://localhost:8000
+# then open http://localhost:8000
 ```
 
-## Despliegue
+## Deployment
 
-GitHub Pages sirve la raíz del repositorio. Hacer push a `main` publica los cambios. El archivo `CNAME` mantiene el dominio `www.rconnectme.com`.
+GitHub Pages serves the repository root. Pushing to `main` publishes the changes. The `CNAME` file keeps the `www.rconnectme.com` domain.
 
-## Estructura de secciones
+## Section structure
 
-La navegación y el smooth scroll dependen de los `id` de las secciones en `index.html`:
+Navigation and smooth scroll depend on the section `id`s in `index.html`:
 
 `#mission-vision`, `#challenge`, `#coordination-gap`, `#approach`, `#ecosystem`, `#ecosystem-coordinate`, `#impact`, `#experience`, `#contact`.
 
-Renombrar un `id` requiere actualizar los enlaces del navbar y cualquier ancla interna.
+Renaming an `id` requires updating the navbar links and any internal anchors.
 
-## Accesibilidad
+## Accessibility
 
-El diseño apunta a contraste WCAG AAA (7:1+), focus rings de 4px, navegación por teclado y compatibilidad con lectores de pantalla. Al modificar la interactividad, conservar el skip link, el `aria-expanded` del botón de menú y el fallback de `prefers-reduced-motion` en `main.js`.
+The design targets WCAG AAA contrast (7:1+), 4px focus rings, keyboard navigation, and screen reader compatibility. When modifying interactivity, preserve the skip link, the menu button's `aria-expanded`, and the `prefers-reduced-motion` fallback in `main.js`.
