@@ -8,7 +8,7 @@ Static marketing site for Rural ConnectMe (www.rconnectme.com). Built with Astro
 
 ## Working on the site
 
-- Install deps: `pnpm install` (Node 20+, pnpm 11+).
+- Install deps: `pnpm install` (Node 22.13+, pnpm 11+).
 - Local dev: `pnpm dev` — Astro dev server with HMR.
 - Production build: `pnpm build` → outputs to `dist/`.
 - Preview the built site: `pnpm preview`.

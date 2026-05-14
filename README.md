@@ -21,7 +21,7 @@ Fonts are loaded from Google Fonts and the hero video from Azure Blob Storage.
 
 ## Local development
 
-Requires Node 20+ and pnpm 11+.
+Requires Node 22.13+ and pnpm 11+.
 
 ```bash
 pnpm install
