@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static marketing site for Rural ConnectMe (www.rconnectme.com). Built with Astro 5, deployed to GitHub Pages. `public/CNAME` sets the custom domain.
+Static marketing site for Rural ConnectMe (www.rconnectme.com). Built with Astro 6, deployed to GitHub Pages. `public/CNAME` sets the custom domain.
 
 ## Working on the site
 

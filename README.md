@@ -8,7 +8,7 @@ The site presents the initiative's mission and vision, the rural connectivity ch
 
 ## Stack
 
-Static site built with [Astro 5](https://astro.build):
+Static site built with [Astro 6](https://astro.build):
 
 - `src/pages/index.astro` — single page composing the Navbar, Hero, Footer components and the inline section content.
 - `src/components/` — `Navbar.astro`, `Hero.astro`, `Footer.astro`.
