@@ -4,21 +4,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static marketing site for Rural ConnectMe (www.rconnectme.com). Single-page site deployed via GitHub Pages — `CNAME` sets the custom domain. No build system, no package manager, no tests.
+Static marketing site for Rural ConnectMe (www.rconnectme.com). Built with Astro 5, deployed to GitHub Pages. `public/CNAME` sets the custom domain.
 
 ## Working on the site
 
-- Preview locally by opening `index.html` directly, or run any static server from the repo root (e.g. `python -m http.server 8000`).
-- Deploy = push to `main`. GitHub Pages serves the repo root as-is.
-- All assets are vendored or loaded from CDNs (Google Fonts). There is no bundler step; edits to `index.html`, `styles.css`, `main.js` ship directly.
+- Install deps: `pnpm install` (Node 20+, pnpm 11+).
+- Local dev: `pnpm dev` — Astro dev server with HMR.
+- Production build: `pnpm build` → outputs to `dist/`.
+- Preview the built site: `pnpm preview`.
+- Deploy = push to `main`. The workflow at `.github/workflows/deploy.yml` runs `pnpm build` and publishes `dist/` to GitHub Pages.
 
 ## Architecture
 
-Three files do everything:
-
-- `index.html` — entire page content. Sections are anchored by id (`#challenge`, `#approach`, `#ecosystem`, `#experience`, `#contact`, plus `#mission-vision`, `#coordination-gap`, `#ecosystem-coordinate`, `#impact`). Navbar links and smooth-scroll target these ids, so renaming an id requires updating the nav and any in-page anchors.
-- `styles.css` — design system driven by CSS custom properties declared in `:root`. Tokens cover colors (7:1+ contrast targets), Lexend/Source Sans 3 typography, an 8dp spacing scale, and section variants (`.section--light`, `.section--white`, `.section--dark`). Prefer adding new styles by composing existing tokens and BEM-style class names (`block__element--modifier`) already used throughout.
-- `main.js` — single IIFE wiring four behaviors: navbar scroll shadow, mobile menu toggle (with Escape-to-close and link-click close), IntersectionObserver-based fade-in animations with parent-grouped stagger delays, and a smooth-scroll fallback for `a[href^="#"]`. Animated elements are selected by class list at the top of the file (`.mission__card, .pillar, .stakeholder-card, .stat, .process__step, .challenge__item, .experience__card`) — new animatable components must be added to that selector or they will not fade in. The script honors `prefers-reduced-motion` by skipping the observer and revealing everything immediately.
+- `src/pages/index.astro` — single page. Composes `<Navbar>`, `<Hero>`, `<Footer>` and inlines the other sections (`#mission-vision`, `#challenge`, `#coordination-gap`, `#approach`, `#ecosystem`, `#ecosystem-coordinate`, `#impact`, `#experience`, `#focus`, `#contact`). Section ids are referenced by the navbar and footer links; renaming an id requires updating both.
+- `src/layouts/Base.astro` — `<html>`/`<head>`, Google Fonts preconnect+import, global CSS import, skip link, and a `<script>` that loads `src/scripts/site.ts`.
+- `src/components/` — `Navbar.astro`, `Hero.astro`, `Footer.astro`. New sections that are reused or contain media belong here; one-off content stays inline in `index.astro`.
+- `src/styles/global.css` — design system driven by CSS custom properties declared in `:root`. Tokens cover colors (7:1+ contrast targets), Lexend/Source Sans 3 typography, an 8dp spacing scale, and section variants (`.section--light`, `.section--white`, `.section--dark`). Prefer composing existing tokens and BEM-style class names (`block__element--modifier`) already used throughout.
+- `src/scripts/site.ts` — single module wiring four behaviors: navbar scroll shadow, mobile menu toggle (with Escape-to-close and link-click close), IntersectionObserver-based fade-in animations with parent-grouped stagger delays, and a smooth-scroll fallback for `a[href^="#"]`. Animated elements are selected by class list at the top of the file (`.mission__card, .pillar, .stakeholder-card, .stat, .process__step, .challenge__item, .experience__card`) — new animatable components must be added to that selector or they will not fade in. The script honors `prefers-reduced-motion` by skipping the observer and revealing everything immediately. Astro inlines it as a `<script type="module">` in the built HTML.
+- `public/` — assets served as-is: `favicon.svg`, `CNAME`.
 
 ## Accessibility constraints
 
