@@ -8,36 +8,49 @@ The site presents the initiative's mission and vision, the rural connectivity ch
 
 ## Stack
 
-Static site with no build process:
+Static site built with [Astro 5](https://astro.build):
 
-- `index.html` — full page content.
-- `styles.css` — design system based on CSS custom properties (navy/green/orange palette, Lexend + Source Sans 3 typography, 8dp spacing scale, WCAG AAA contrast target).
-- `main.js` — IIFE with navbar scroll shadow, mobile menu, fade-in animations via `IntersectionObserver` (honors `prefers-reduced-motion`), and smooth scroll for anchors.
-- `favicon.svg`, `CNAME` — favicon and custom domain for GitHub Pages.
+- `src/pages/index.astro` — single page composing the Navbar, Hero, Footer components and the inline section content.
+- `src/components/` — `Navbar.astro`, `Hero.astro`, `Footer.astro`.
+- `src/layouts/Base.astro` — `<html>`, fonts, global CSS, client script.
+- `src/styles/global.css` — design system based on CSS custom properties (navy/green/orange palette, Lexend + Source Sans 3 typography, 8dp spacing scale, WCAG AAA contrast target).
+- `src/scripts/site.ts` — navbar scroll shadow, mobile menu, fade-in animations via `IntersectionObserver` (honors `prefers-reduced-motion`), and smooth scroll for anchors.
+- `public/favicon.svg`, `public/CNAME` — favicon and custom domain for GitHub Pages.
 
-Fonts are loaded from Google Fonts and the hero video from Azure Blob Storage. No npm dependencies, no compilation step.
+Fonts are loaded from Google Fonts and the hero video from Azure Blob Storage.
 
 ## Local development
 
-Open `index.html` directly in the browser, or serve the folder with any static server:
+Requires Node 20+ and pnpm 11+.
 
 ```bash
-python -m http.server 8000
-# then open http://localhost:8000
+pnpm install
+pnpm dev
+```
+
+Open <http://localhost:4321>.
+
+To preview a production build locally:
+
+```bash
+pnpm build
+pnpm preview
 ```
 
 ## Deployment
 
-GitHub Pages serves the repository root. Pushing to `main` publishes the changes. The `CNAME` file keeps the `www.rconnectme.com` domain.
+Pushing to `main` triggers the workflow at `.github/workflows/deploy.yml`, which runs `pnpm build` and publishes `dist/` to GitHub Pages. The `public/CNAME` file keeps the `www.rconnectme.com` domain.
+
+GitHub repo setting required: **Settings → Pages → Source** must be set to **GitHub Actions**.
 
 ## Section structure
 
-Navigation and smooth scroll depend on the section `id`s in `index.html`:
+Navigation and smooth scroll depend on the section `id`s in `src/pages/index.astro`:
 
-`#mission-vision`, `#challenge`, `#coordination-gap`, `#approach`, `#ecosystem`, `#ecosystem-coordinate`, `#impact`, `#experience`, `#contact`.
+`#mission-vision`, `#challenge`, `#coordination-gap`, `#approach`, `#ecosystem`, `#ecosystem-coordinate`, `#impact`, `#experience`, `#focus`, `#contact`.
 
 Renaming an `id` requires updating the navbar links and any internal anchors.
 
 ## Accessibility
 
-The design targets WCAG AAA contrast (7:1+), 4px focus rings, keyboard navigation, and screen reader compatibility. When modifying interactivity, preserve the skip link, the menu button's `aria-expanded`, and the `prefers-reduced-motion` fallback in `main.js`.
+The design targets WCAG AAA contrast (7:1+), 4px focus rings, keyboard navigation, and screen reader compatibility. When modifying interactivity, preserve the skip link, the menu button's `aria-expanded`, and the `prefers-reduced-motion` fallback in `src/scripts/site.ts`.

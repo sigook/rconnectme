@@ -1,83 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rural ConnectMe — Connecting Rural Infrastructure, Workforce, and Communities</title>
-  <meta name="description" content="Rural ConnectMe explores how broadband expansion can be integrated with workforce development and digital participation so rural communities can translate connectivity investments into real economic growth.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-
-  <!-- Navigation -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="#" class="navbar__brand" aria-label="Rural ConnectMe Home">
-        <svg class="navbar__logo" width="36" height="36" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-          <path d="M54 38 A24 24 0 1 1 52 22" stroke="#1A3A6C" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-          <circle cx="24" cy="24" r="4.2" fill="#1A3A6C"/>
-          <path d="M16 42 Q16 32 24 32 Q32 32 32 42 Z" fill="#1A3A6C"/>
-          <path d="M19 16 Q24 12 29 16" stroke="#1A3A6C" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-          <path d="M16 13 Q24 7 32 13" stroke="#1A3A6C" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-          <circle cx="36" cy="32" r="2" fill="#1A3A6C"/>
-          <line x1="36" y1="32" x2="46" y2="24" stroke="#1A3A6C" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="36" y1="32" x2="50" y2="32" stroke="#4AA84F" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="36" y1="32" x2="46" y2="40" stroke="#4AA84F" stroke-width="1.8" stroke-linecap="round"/>
-          <circle cx="47" cy="23" r="2" fill="#1A3A6C"/>
-          <circle cx="51" cy="32" r="2" fill="#4AA84F"/>
-          <circle cx="47" cy="41" r="2" fill="#4AA84F"/>
-        </svg>
-        <span>Rural ConnectMe</span>
-      </a>
-      <nav class="navbar__nav" id="navMenu" aria-label="Main navigation">
-        <ul class="navbar__list" role="list">
-          <li><a href="#challenge" class="navbar__link">The Challenge</a></li>
-          <li><a href="#approach" class="navbar__link">Our Approach</a></li>
-          <li><a href="#ecosystem" class="navbar__link">Ecosystem</a></li>
-          <li><a href="#experience" class="navbar__link">Experience</a></li>
-          <li><a href="#contact" class="navbar__link btn btn--primary btn--sm">Connect With Us</a></li>
-        </ul>
-      </nav>
-      <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-      </button>
-    </div>
-  </header>
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Rural ConnectMe — Connecting Rural Infrastructure, Workforce, and Communities"
+  description="Rural ConnectMe explores how broadband expansion can be integrated with workforce development and digital participation so rural communities can translate connectivity investments into real economic growth."
+>
+  <Navbar />
 
   <main id="main">
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <h1 class="hero__title">Connecting Rural Infrastructure, Workforce, and <span class="text-accent">Communities</span></h1>
-          <p class="hero__subtitle">Rural ConnectMe explores how broadband expansion can be integrated with workforce development and digital participation so rural communities can translate connectivity investments into real economic growth.</p>
-          <div class="hero__actions">
-            <a href="#ecosystem" class="btn btn--primary btn--lg">Explore the Rural Ecosystem</a>
-            <a href="#approach" class="btn btn--outline btn--lg">Learn More</a>
-          </div>
-        </div>
-        <div class="hero__visual">
-          <video
-            class="hero__illustration"
-            src="https://rconnectme.blob.core.windows.net/webcontent/rmconnect_video.mp4#t=0.1"
-            controls
-            muted
-            playsinline
-            preload="metadata"
-            aria-label="Rural ConnectMe overview video">
-          </video>
-        </div>
-      </div>
-    </section>
+    <Hero />
 
-    <!-- SECTION: Mission & Vision -->
     <section class="section section--light" id="mission-vision">
       <div class="container">
         <div class="section__header">
@@ -110,7 +45,6 @@
       </div>
     </section>
 
-    <!-- SECTION 1: The Rural Connectivity Challenge -->
     <section class="section section--white" id="challenge">
       <div class="container">
         <div class="section__header">
@@ -159,7 +93,6 @@
       </div>
     </section>
 
-    <!-- SECTION: The Coordination Gap -->
     <section class="section section--light" id="coordination-gap">
       <div class="container">
         <div class="section__header">
@@ -174,7 +107,6 @@
       </div>
     </section>
 
-    <!-- SECTION 2: The Rural ConnectMe Approach -->
     <section class="section section--light" id="approach">
       <div class="container">
         <div class="section__header">
@@ -218,7 +150,6 @@
       </div>
     </section>
 
-    <!-- SECTION 3: A Rural Digital Ecosystem -->
     <section class="section section--white" id="ecosystem">
       <div class="container">
         <div class="section__header">
@@ -297,7 +228,6 @@
       </div>
     </section>
 
-    <!-- SECTION: Ecosystem We Coordinate -->
     <section class="section section--light" id="ecosystem-coordinate">
       <div class="container">
         <div class="section__header">
@@ -377,7 +307,6 @@
       </div>
     </section>
 
-    <!-- SECTION: Expected Impact -->
     <section class="section section--white" id="impact">
       <div class="container">
         <div class="section__header">
@@ -440,7 +369,6 @@
       </div>
     </section>
 
-    <!-- SECTION 4: Experience in Rural Connectivity -->
     <section class="section section--dark" id="experience">
       <div class="container">
         <div class="section__header section__header--light">
@@ -489,7 +417,6 @@
       </div>
     </section>
 
-    <!-- SECTION 5: Current Focus -->
     <section class="section section--light" id="focus">
       <div class="container">
         <div class="section__header">
@@ -500,13 +427,10 @@
           <div class="focus__map" aria-hidden="true">
             <svg viewBox="0 0 400 300" fill="none" class="focus__illustration">
               <rect width="400" height="300" rx="12" fill="#F1F5F9"/>
-              <!-- Simplified US outline suggestion -->
               <path d="M60 120 Q80 80 140 90 Q200 70 260 85 Q300 80 340 100 Q350 130 340 160 Q330 180 300 190 Q280 210 240 200 Q200 220 160 210 Q120 220 80 200 Q50 170 60 120Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1.5"/>
-              <!-- Florida highlight -->
               <circle cx="280" cy="200" r="16" fill="#0C4A6E" opacity="0.2"/>
               <circle cx="280" cy="200" r="8" fill="#0C4A6E"/>
               <text x="280" y="228" text-anchor="middle" fill="#0C4A6E" font-family="Lexend, sans-serif" font-size="11" font-weight="600">Florida</text>
-              <!-- Georgia highlight -->
               <circle cx="268" cy="175" r="16" fill="#14532D" opacity="0.2"/>
               <circle cx="268" cy="175" r="8" fill="#14532D"/>
               <text x="268" y="160" text-anchor="middle" fill="#14532D" font-family="Lexend, sans-serif" font-size="11" font-weight="600">Georgia</text>
@@ -526,7 +450,6 @@
       </div>
     </section>
 
-    <!-- SECTION 6: Connect With the Initiative -->
     <section class="section section--white" id="contact">
       <div class="container">
         <div class="cta__inner">
@@ -567,53 +490,5 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="#" class="navbar__brand" aria-label="Rural ConnectMe Home">
-          <svg class="navbar__logo" width="32" height="32" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <path d="M54 38 A24 24 0 1 1 52 22" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-            <circle cx="24" cy="24" r="4.2" fill="#94A3B8"/>
-            <path d="M16 42 Q16 32 24 32 Q32 32 32 42 Z" fill="#94A3B8"/>
-            <path d="M19 16 Q24 12 29 16" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-            <path d="M16 13 Q24 7 32 13" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-            <circle cx="36" cy="32" r="2" fill="#94A3B8"/>
-            <line x1="36" y1="32" x2="46" y2="24" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="36" y1="32" x2="50" y2="32" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="36" y1="32" x2="46" y2="40" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
-            <circle cx="47" cy="23" r="2" fill="#94A3B8"/>
-            <circle cx="51" cy="32" r="2" fill="#94A3B8"/>
-            <circle cx="47" cy="41" r="2" fill="#94A3B8"/>
-          </svg>
-          <span>Rural ConnectMe</span>
-        </a>
-        <p class="footer__tagline">Connecting rural infrastructure, workforce, and communities.</p>
-      </div>
-      <nav class="footer__nav" aria-label="Footer navigation">
-        <div class="footer__col">
-          <h4 class="footer__heading">Initiative</h4>
-          <ul role="list">
-            <li><a href="#challenge">The Challenge</a></li>
-            <li><a href="#approach">Our Approach</a></li>
-            <li><a href="#ecosystem">Ecosystem</a></li>
-            <li><a href="#experience">Experience</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__heading">Resources</h4>
-          <ul role="list">
-            <li><a href="#contact">Connect With Us</a></li>
-            <li><a href="#focus">Current Focus</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="footer__bottom">
-        <p>&copy; 2026 Rural ConnectMe. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
-</html>
+  <Footer />
+</Base>
